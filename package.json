@@ -1,0 +1,39 @@
+{
+  "name": "clone_repo_from_azure_kroton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "https://github.com/danieldkm/clone_repo_from_azure_kroton.git",
+  "author": "danielmorita <danielkeyti@gmail.com>",
+  "scripts": {
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
+    "dev:server": "set DEBUG=api* & ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/infra/server.ts",
+    "start": "ts-node src/shared/infra/http/server.ts",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/node": "^14.11.2",
+    "axios": "^0.19.2",
+    "azure-devops-node-api": "^10.1.1",
+    "debug": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "typed-rest-client": "^1.7.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2",
+    "ts-node-dev": "^1.0.0-pre.63",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.3"
+  }
+}
