@@ -37,7 +37,7 @@ async function start() {
         config.dreamteamRepositories.includes(repository.name) ||
         config.eadevsRepositories.includes(repository.name)
       ) {
-        debug('respository', repository.remoteUrl);
+        // debug('respository', repository.remoteUrl);
         promisesClone.push(
           cloneRepositoryService.execute(repository.name, repository.remoteUrl),
         );

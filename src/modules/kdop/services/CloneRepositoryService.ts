@@ -18,12 +18,12 @@ class CloneRepositoryService {
     this.createDirectoryService = new CreateDirectoryService();
   }
 
-  async execute(name: string, url_repository: string) {
+  async execute(name: string, url_repository: string): Promise<any> {
     const directory = config.dreamteam[name] || config.eadevs[name];
-    console.log(
-      'directory',
-      `${process.env.WORKING_DIRECTORY}/${directory}/${name}`,
-    );
+    // console.log(
+    //   'directory',
+    //   `${process.env.WORKING_DIRECTORY}/${directory}/${name}`,
+    // );
     const existsDirectory = await this.checkExistsDirectoryService.execute(
       `${process.env.WORKING_DIRECTORY}/${directory}/${name}`,
     );
@@ -48,6 +48,7 @@ class CloneRepositoryService {
       // console.log('result', result);
       return result;
     }
+    return null;
   }
 }
 

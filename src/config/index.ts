@@ -1,4 +1,8 @@
-const dreamteam = {
+interface IRepo {
+  [key: string]: any;
+}
+
+const dreamteam: IRepo = {
   'colaborar-pontos-prova-producer': 'dreamteam/pontuacao_prova',
   'agregador-pontos-alunos-piloto': 'dreamteam/pontuacao_prova',
   'pontos-prova-aluno-sender': 'dreamteam/pontuacao_prova',
@@ -98,7 +102,7 @@ const dreamteamRepositories = [
   'rest',
 ];
 
-const eadevs = {
+const eadevs: IRepo = {
   'dnm-consumer-pontos': 'eadevs/dnm',
 
   syncvideos: 'eadevs/mediastream',
