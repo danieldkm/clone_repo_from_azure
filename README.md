@@ -12,6 +12,8 @@ clona os repositorios do time mapeada nas configurações.
 # Setup
 
 - informar o diretorio em que irá clonar os repostórios em .env "WORKING_DIRECTORY"
+  - exemplo:
+    `/usr/daniel/projects`
 - gerar token de acesso personlizado no "dev.azure"
 
 # Comandos
